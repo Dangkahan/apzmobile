@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "APZshop"
 include(":app")
- 
+include(":apz-mobile-lib")
