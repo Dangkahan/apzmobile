@@ -1,0 +1,13 @@
+# Configuration file for building snapshots and releases wtith jitpack.io
+jdk:
+  -openjdk17
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+install:
+  -FILE="-Dfile=apz-mobile-lib-release.aar"
+  -mvn install:install-file $FILE 
+  -DgroupId=com.github.Dangkahan 
+  -DartifactId=apz-mobile-lib 
+  -Dversion=1.0 
+  -Dpackaging=aar
+  -DgeneratePom=true
